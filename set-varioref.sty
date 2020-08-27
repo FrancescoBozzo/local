@@ -1,0 +1,8 @@
+\usepackage[nospace]{varioref}
+
+% Doppio riferimento: controlla se appartengono alla stessa pagina
+\newcommand\doublevref[2]{%
+    \vpagerefcompare{#1}{#2}%
+        {le definizioni di \ref{#1} e \ref{#2} \vpageref{#1}}%
+        {la definizione di \ref{#1} \vpageref{#1} e di \ref{#2} \vpageref{#2}}%
+}
